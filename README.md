@@ -71,28 +71,25 @@ modules:
 
 ### Marking Messages as Read
 ```xml
-<iq type='set' id='mark1'>
-  <status xmlns='urn:xmpp:message-status:0' type='read'>
-    <message id='msg1' jid='user@domain.com'/>
-  </status>
+<iq type='set'>
+  <mark-read xmlns='urn:xmpp:message-status:0' id='msg_id' from='from_user_jid' to='to_user_jid'>
+  </mark-read>
 </iq>
 ```
 
 ### Marking Messages as Delivered
 ```xml
-<iq type='set' id='mark2'>
-  <status xmlns='urn:xmpp:message-status:0' type='delivered'>
-    <message id='msg1' jid='user@domain.com'/>
-  </status>
+<iq type='set'>
+  <mark-delivered xmlns='urn:xmpp:message-status:0' id='msg_id' from='sender_user_jid' to='to_user_jid'>
+  </mark-delivered>
 </iq>
 ```
 
 ### Querying Message Status
 ```xml
-<iq type='get' id='query1'>
-  <status xmlns='urn:xmpp:message-status:0'>
-    <message id='msg1' jid='user@domain.com'/>
-  </status>
+<iq type='get'>
+  <get-status xmlns='urn:xmpp:message-status:0' id='msg_id' jid='sender_user_jid'>
+  </get-status>
 </iq>
 ```
 
