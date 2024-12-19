@@ -25,12 +25,12 @@ This module provides functionality to track and manage message read and delivery
 ### Docker Installation (Recommended)
 1. Create modules source directory in your ejabberd container:
    ```bash
-   mkdir -p .ejabberd_modules/sources
+   mkdir -p .ejabberd-modules/sources
    ```
 
 2. Copy the module source to the container:
    ```bash
-   cp -r mod_message_status .ejabberd_modules/sources/
+   cp -r mod_message_status .ejabberd-modules/sources/
    ```
 
 3. Check and install the module using ejabberdctl:
